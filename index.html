@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="general">
+        <div class="grid grid-cols-2">
+            <div class="col-span-1"></div>
+            <div class="col-span-1">
+                <div class="login-box bg-[#dbeafe] h-screen flex flex-col justify-center items-center">
+                    <img src="./assets/istockphoto-1150645589-612x612.jpg" class="rounded-full w-32 mb-4" alt="Avatar">
+                    <h1 class="text-2xl font-bold mb-2">Bienvenido a tu Universidad</h1>
+                    <p class="text-sm mb-4">Inicia sesión para continuar</p>
+                    <form class="w-64 bg-white p-6 rounded-2xl shadow-md w-96">
+                        <h2 class="text-xl font-bold">Iniciar Sesión</h2>
+                        <p class="mb-6 text-sm text-gray-600">Ingresa tus credenciales para acceder al sistema</p>
+
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium mb-1" for="username">Usuario</label>
+                            <div class="flex items-center border border-gray-300 rounded px-3 py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-gray-400 mr-2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                </svg>
+                                <input class="flex-1 focus:outline-none" type="text" id="username"
+                                    placeholder="Ingresa tu usuario">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium mb-1" for="password">Contraseña</label>
+                            <div class="flex items-center border border-gray-300 rounded px-3 py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-gray-400 mr-2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
+                                    <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+                                </svg>
+
+                                <input class="flex-1 focus:outline-none" type="password" id="password"
+                                    placeholder="********">
+
+                                <button type="button" id="togglePassword" class="focus:outline-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-gray-400 ml-2">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                        <path
+                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <a href="" class="text-[#2563eb] float-end mb-4">¿Olvidaste tu contraseña?</a>
+                        <button
+                            class="mb-4 w-full bg-blue-500 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-blue-600 transition-all duration-200"
+                            type="submit">
+                            Iniciar Sesión
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="text-white mt-0.5">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l14 0" />
+                                <path d="M15 16l4 -4" />
+                                <path d="M15 8l4 4" />
+                            </svg>
+                        </button>
+                        <p class="text-sm text-center text-gray-400">¿No tienes cuenta? <span class="text-[#7d9ff1]">
+                                <a href="">Contacta al administrador</a></span></p>
+                        <p class="text-sm text-center text-gray-400">&copy; 2025 Universidad. Todos los derechos
+                            reservados</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+
+</html>
