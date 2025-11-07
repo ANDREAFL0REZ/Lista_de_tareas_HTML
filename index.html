@@ -5,21 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="shortcut icon" href="assets/istockphoto-1150645589-612x612.jpg" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="bg-[#dbeafe]">
-
     <div class="min-h-screen grid grid-cols-1 md:grid-cols-2">
         <div class="hidden md:block bg-[url('./assets/educacion.jpg')] bg-cover bg-center relative">
-            <div class="bg-white bg-opacity-70 absolute inset-0 flex flex-col justify-center items-center p-8">
-
-            </div>
+            <div class="bg-white bg-opacity-70 absolute inset-0 flex flex-col justify-center items-center p-8"></div>
         </div>
 
         <div class="flex flex-col justify-center items-center px-6 py-10 md:py-0">
-            <img src="./assets/istockphoto-1150645589-612x612.jpg"
-                class="rounded-full w-24 md:w-32 mb-4 shadow-lg border border-white" alt="Avatar" />
+            <img src="./assets/istockphoto-1150645589-612x612.jpg" class="rounded-full w-24 md:w-32 mb-4 shadow-lg border border-white" alt="Avatar" />
 
             <h1 class="text-2xl md:text-3xl font-bold mb-1 text-center text-gray-800">
                 Bienvenido a tu Universidad
@@ -28,7 +25,7 @@
                 Inicia sesión para continuar
             </p>
 
-            <form class="w-full max-w-sm bg-white p-6 rounded-2xl shadow-md">
+            <form method="post" id="LoginForm" class="w-full max-w-sm bg-white p-6 rounded-2xl shadow-md">
                 <h2 class="text-xl font-bold mb-2 text-left">Iniciar Sesión</h2>
                 <p class="mb-6 text-sm text-gray-600 text-left">
                     Ingresa tus credenciales para acceder al sistema
@@ -44,24 +41,20 @@
                             <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                         </svg>
-                        <input class="flex-1 focus:outline-none text-sm" type="text" id="username"
-                            placeholder="Ingresa tu usuario" />
+                        <input class="flex-1 focus:outline-none text-sm" type="text" name="username" id="username" placeholder="Ingresa tu usuario" required/>
                     </div>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-sm font-medium mb-1" for="password">Contraseña</label>
                     <div class="flex items-center border border-gray-300 rounded px-3 py-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="text-gray-400 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 mr-2">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
                             <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
                         </svg>
 
-                        <input class="flex-1 focus:outline-none text-sm" type="password" id="password"
-                            placeholder="********" />
+                        <input class="flex-1 focus:outline-none text-sm" type="password" name="password" id="password" placeholder="********" required/>
 
                         <button type="button" id="togglePassword" class="focus:outline-none ml-2">
                             <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -69,8 +62,7 @@
                                 stroke-linecap="round" stroke-linejoin="round" class="text-gray-400">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6
-                   c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6 c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
                             </svg>
                         </button>
                     </div>
@@ -80,9 +72,7 @@
                     ¿Olvidaste tu contraseña?
                 </a>
 
-                <button
-                    class="mb-4 w-full bg-blue-500 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-blue-600 transition-all duration-200 shadow-md hover:shadow-lg"
-                    type="submit">
+                <button class="mb-4 w-full bg-blue-500 text-white py-2 rounded flex items-center justify-center gap-2 hover:bg-blue-600 transition-all duration-200 shadow-md hover:shadow-lg" type="submit">
                     Iniciar Sesión
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -107,8 +97,11 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         const togglePassword = document.getElementById("togglePassword");
+        const LoginForm = document.getElementById("LoginForm")
         const passwordInput = document.getElementById("password");
         const eyeIcon = document.getElementById("eyeIcon");
 
@@ -118,26 +111,45 @@
 
             if (type === "text") {
                 eyeIcon.innerHTML = `
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-          <path d="M3 3l18 18" />
-          <path d="M10.58 10.58a2 2 0 0 0 2.83 2.83" />
-          <path d="M9.88 5.46a9.06 9.06 0 0 1 2.12 -.26
-                   c3.6 0 6.6 2 9 6c-.436 .727 -.9 1.374
-                   -1.39 1.938m-2.26 2.1a8.994 8.994 0 0 1
-                   -5.35 1.962c-3.6 0 -6.6 -2 -9 -6
-                   c.741 -1.235 1.564 -2.266 2.47 -3.092" />
-        `;
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 3l18 18" />
+                    <path d="M10.58 10.58a2 2 0 0 0 2.83 2.83" />
+                    <path d="M9.88 5.46a9.06 9.06 0 0 1 2.12 -.26
+                    c3.6 0 6.6 2 9 6c-.436 .727 -.9 1.374
+                    -1.39 1.938m-2.26 2.1a8.994 8.994 0 0 1
+                    -5.35 1.962c-3.6 0 -6.6 -2 -9 -6
+                    c.741 -1.235 1.564 -2.266 2.47 -3.092" />
+                `;
             } else {
                 eyeIcon.innerHTML = `
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-          <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-          <path d="M21 12c-2.4 4 -5.4 6 -9 6
-                   c-3.6 0 -6.6 -2 -9 -6
-                   c2.4 -4 5.4 -6 9 -6
-                   c3.6 0 6.6 2 9 6" />
-        `;
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                    <path d="M21 12c-2.4 4 -5.4 6 -9 6
+                    c-3.6 0 -6.6 -2 -9 -6
+                    c2.4 -4 5.4 -6 9 -6
+                    c3.6 0 6.6 2 9 6" />
+                `;
             }
         });
+
+        LoginForm.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const formData = new FormData(LoginForm)
+            const username = formData.get("username")
+            const password = formData.get("password")
+
+            if (username !== 'admin' || password !== '12345678') return Swal.fire({
+                icon: "error",
+                title: "Error...",
+                text: "Usuario no encontrado!"
+            })
+
+            Swal.fire({
+                icon: "success",
+                title: "Bienvenido",
+                text: "Inicio de sesión exitoso",
+            })
+        })
     </script>
 
 </body>
